@@ -1,0 +1,9 @@
+{
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"streetsidesoftware.code-spell-checker",
+		"streetsidesoftware.code-spell-checker-arabic",
+		"aaron-bond.better-comments",
+		"mxsdev.typescript-explorer"
+	]
+}

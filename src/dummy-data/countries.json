@@ -1,0 +1,82 @@
+[
+	{
+		"country": "Syria",
+		"cities": [
+			"Damascus",
+			"Aleppo",
+			"Homs"
+		]
+	},
+	{
+		"country": "Saudi Arabia",
+		"cities": [
+			"Riyadh",
+			"Jeddah",
+			"Mecca"
+		]
+	},
+	{
+		"country": "Egypt",
+		"cities": [
+			"Cairo",
+			"Alexandria",
+			"Giza"
+		]
+	},
+	{
+		"country": "United Arab Emirates",
+		"cities": [
+			"Dubai",
+			"Abu Dhabi",
+			"Sharjah"
+		]
+	},
+	{
+		"country": "Morocco",
+		"cities": [
+			"Casablanca",
+			"Rabat",
+			"Marrakech"
+		]
+	},
+	{
+		"country": "France",
+		"cities": [
+			"Paris",
+			"Marseille",
+			"Lyon"
+		]
+	},
+	{
+		"country": "Japan",
+		"cities": [
+			"Tokyo",
+			"Osaka",
+			"Kyoto"
+		]
+	},
+	{
+		"country": "India",
+		"cities": [
+			"Mumbai",
+			"Delhi",
+			"Bangalore"
+		]
+	},
+	{
+		"country": "Brazil",
+		"cities": [
+			"São Paulo",
+			"Rio de Janeiro",
+			"Brasília"
+		]
+	},
+	{
+		"country": "South Africa",
+		"cities": [
+			"Johannesburg",
+			"Cape Town",
+			"Durban"
+		]
+	}
+]

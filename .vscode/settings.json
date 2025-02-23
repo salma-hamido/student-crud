@@ -1,0 +1,63 @@
+{
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"prettier.jsxSingleQuote": true,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"bracketPairColorizer.depreciation-notice": false,
+	"editor.unicodeHighlight.allowedCharacters": {
+		"ه": true
+	},
+	"editor.unicodeHighlight.ambiguousCharacters": false,
+	"editor.linkedEditing": true,
+	"files.associations": {
+		"*.sass": "scss",
+		"*.html": "html"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"git.confirmSync": false,
+	"emmet.showSuggestionsAsSnippets": true,
+	"emmet.triggerExpansionOnTab": true,
+	"emmet.useInlineCompletions": true,
+	"[scss]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"html.format.contentUnformatted": "",
+	"diffEditor.ignoreTrimWhitespace": false,
+	"prettier.tabWidth": 6,
+	"prettier.singleQuote": false,
+	"editor.tabSize": 6,
+	"prettier.printWidth": 120,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": true,
+	"cSpell.language": "en,ar",
+	"git.openRepositoryInParentFolders": "never",
+	"terminal.integrated.localEchoStyle": "dim",
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"editor.largeFileOptimizations": false,
+	"[css]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"git.enableSmartCommit": true,
+	"cSpell.words": [
+		"aone",
+		"jsky"
+	],
+	// disable past handler
+	"editor.pasteAs.enabled": false,
+	"editor.pasteAs.showPasteSelector": "never"
+}
