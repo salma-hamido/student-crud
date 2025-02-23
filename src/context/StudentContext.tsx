@@ -13,6 +13,7 @@ export const StudentProvider = ({ children }: { children: React.ReactNode }) => 
 	const [students, setStudents] = useState([]);
 	const [grades, setGrades] = useState([]);
 	const [gender, setGender] = useState([]);
+	const [loading, setLoading] = useState(true);
 
 	const fetchGrades = async () => {
 		try {
@@ -41,6 +42,8 @@ export const StudentProvider = ({ children }: { children: React.ReactNode }) => 
 		} catch (error) {
 			console.error("Error fetching students:", error);
 			toast.error(t("Error fetching students"));
+		} finally {
+			setLoading(false);
 		}
 	};
 
@@ -120,7 +123,6 @@ export const StudentProvider = ({ children }: { children: React.ReactNode }) => 
 	};
 
 	useEffect(() => {
-		console.log('hiii')
 		reload();
 	}, []);
 
@@ -132,7 +134,8 @@ export const StudentProvider = ({ children }: { children: React.ReactNode }) => 
 		addStudent,
 		updateStudent,
 		deleteStudent,
-		reload
+		reload,
+		loading
 	};
 
 	return (

@@ -10,9 +10,6 @@ import CustomDataGrid from "../components/DataGrid/CustomDataGrid";
 import { Divider } from "@mui/material";
 import FilterTextField from "../components/Inputs/FilterTextField";
 import TextField from "@mui/material/TextField";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { MenuItem, Select } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import ConfirmDialog from "../components/Dialogs/ConfirmDialog";
@@ -21,12 +18,13 @@ import moment from "moment";
 import ReactDatePicker from "react-datepicker";
 
 import { useStudent } from "../hooks/useStudent";
+import Loading from "../components/loading";
 
 export default function Students() {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === 'ar';
 
-  const { students, deleteStudent } = useStudent();
+  const { students, deleteStudent, loading } = useStudent();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedDate, setSelectedDate] = useState<any>(null);
   const [selectedOperator, setSelectedOperator] = useState("Equal to");
@@ -241,31 +239,31 @@ export default function Students() {
       />
 
       {
+        loading ? <Loading /> :
+          <Box sx={{ display: "flex", paddingTop: '8rem' }}>
+            <Card sx={{ borderRadius: "9px", width: "1240px" }}>
+              <CardContent>
+                <Header setDialog={setDialog} />
+                <Filter
+                  searchTerm={searchTerm}
+                  handleSearchChange={handleSearchChange}
+                  selectedDate={selectedDate}
+                  handleDateChange={handleDateChange}
+                  selectedOperator={selectedOperator}
+                  handleOperatorChange={handleOperatorChange}
+                />
 
-        <Box sx={{ display: "flex", paddingTop: '8rem' }}>
-          <Card sx={{ borderRadius: "9px", width: "1240px" }}>
-            <CardContent>
-              <Header setDialog={setDialog} />
-              <Filter
-                searchTerm={searchTerm}
-                handleSearchChange={handleSearchChange}
-                selectedDate={selectedDate}
-                handleDateChange={handleDateChange}
-                selectedOperator={selectedOperator}
-                handleOperatorChange={handleOperatorChange}
-              />
+                <Divider sx={{ my: 2, height: "2px", backgroundColor: "#99999957" }} />
 
-              <Divider sx={{ my: 2, height: "2px", backgroundColor: "#99999957" }} />
-
-              <CustomDataGrid
-                pageName="Students"
-                columns={columns}
-                data={filteredRows}
-                pageSize={30}
-              />
-            </CardContent>
-          </Card>
-        </Box>
+                <CustomDataGrid
+                  pageName="Students"
+                  columns={columns}
+                  data={filteredRows}
+                  pageSize={30}
+                />
+              </CardContent>
+            </Card>
+          </Box>
       }
     </React.Fragment>
   );

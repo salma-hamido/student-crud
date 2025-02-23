@@ -8,7 +8,7 @@ import LoginPage from "./pages/login";
 import AdminLayout from "./components/Layout/AdminLayout";
 import Loading from "./components/loading";
 import { Toaster } from "react-hot-toast";
-
+import { StudentProvider } from "./context/StudentContext";
 
 export const ProtectedRoute: React.FC = () => {
   const { isAuthenticated, loading } = useAuth();
@@ -18,7 +18,15 @@ export const ProtectedRoute: React.FC = () => {
     return <Loading />
   }
 
-  return isAuthenticated ? <AdminLayout><Outlet /></AdminLayout> : <Navigate to="/login" replace />;
+  return isAuthenticated ? <StudentProvider>
+    <AdminLayout>
+      <Outlet />
+    </AdminLayout>
+  </StudentProvider>
+
+    :
+
+    <Navigate to="/login" replace />;
 };
 
 
